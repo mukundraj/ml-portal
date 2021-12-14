@@ -1,21 +1,23 @@
 import './App.css';
-import { Vitessce } from 'vitessce';
-import myViewConfig from './my-view-config.json';
-import 'vitessce/dist/es/production/static/css/index.css';
 import './index.css';
+import {Routes, Route} from "react-router-dom";
+
+import {
+  Home,
+  About,
+  Docs,
+  Whoops404
+} from "./pages"
 
 function App() {
-  console.log(myViewConfig);
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Welcome to BrainCellData.org</h1>
-      </header>
-      <Vitessce
-            config={myViewConfig}
-            height={800}
-            theme="light"
-        />
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/docs" element={<Docs />}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="*" element={<Whoops404 />}/>
+        </Routes>
     </div>
   );
 }

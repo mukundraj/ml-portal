@@ -52,19 +52,6 @@
         "embeddingType": "C",
         "embeddingZoom": "A"
       },
-      "x": 6,
-      "y": 0,
-      "w": 6,
-      "h": 6
-    }
-    ,
-    {
-      "component": "scatterplot",
-      "coordinationScopes": {
-        "dataset": "A",
-        "embeddingType": "B",
-        "embeddingZoom": "A"
-      },
       "x": 0,
       "y": 0,
       "w": 6,
