@@ -23,7 +23,7 @@
       "name": "inph",
       "files": [
         {
-          "url": "http://localhost:9000/inph_data.json",
+          "url": "https://storage.googleapis.com/ml_portal/testportal_data/inph_data.json",
           "type": "cells",
           "fileType": "cells.json"
         }
