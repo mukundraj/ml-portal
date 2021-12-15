@@ -8,26 +8,26 @@
       "name": "Dries",
       "files": [
         {
-          "url": "https://s3.amazonaws.com/vitessce-data/0.0.31/master_release/dries/dries.cells.json",
+          "url": "https://storage.googleapis.com/ml_portal/testportal_data/cells.json",
           "type": "cells",
           "fileType": "cells.json"
         },
         {
-          "url": "https://s3.amazonaws.com/vitessce-data/0.0.31/master_release/dries/dries.cell-sets.json",
+          "url": "https://storage.googleapis.com/ml_portal/testportal_data/cell-sets.json",
           "type": "cell-sets",
           "fileType": "cell-sets.json"
         }
       ]
     }, {
-      "uid": "D2",
-      "name": "inph",
-      "files": [
-        {
-          "url": "https://storage.googleapis.com/ml_portal/testportal_data/inph_data.json",
-          "type": "cells",
-          "fileType": "cells.json"
-        }
-      ]
+    "uid": "D2",
+    "name": "inph",
+    "files": [
+      {
+        "url": "https://storage.googleapis.com/ml_portal/testportal_data/inph_data.json",
+        "type": "cells",
+        "fileType": "cells.json"
+      }
+    ]
     }
   ],
   "coordinationSpace": {
@@ -36,7 +36,7 @@
       "B": "D2"
     },
     "embeddingType": {
-      "A": "UMAP",
+      "A": "umap",
       "B": "t-SNE",
       "C": "pca"
     },
@@ -48,12 +48,31 @@
     {
       "component": "scatterplot",
       "coordinationScopes": {
-        "dataset": "B",
+        "dataset": "A",
         "embeddingType": "C",
         "embeddingZoom": "A"
       },
       "x": 0,
       "y": 0,
+      "w": 6,
+      "h": 6
+    },
+    {
+      "component": "scatterplot",
+      "coordinationScopes": {
+        "dataset": "A",
+        "embeddingType": "A",
+        "embeddingZoom": "A"
+      },
+      "x": 6,
+      "y": 0,
+      "w": 6,
+      "h": 6
+    },
+    {
+      "component": "cellSets",
+      "x": 0,
+      "y": 6,
       "w": 6,
       "h": 6
     }

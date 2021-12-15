@@ -36,7 +36,7 @@ export function Docs(){
       </div>
     </div>
   <div>
-    <h1>Replace this by read the docs link</h1>
+    <h1>Replace this by readthedocs link</h1>
   </div>
     </div>
   );
@@ -54,7 +54,7 @@ export function About(){
       </div>
     </div>
   <div>
-    <h1>Created by Macosko Lab at Broad Institute of MIT and Harvard</h1>
+    <h1>Created by Macosko Lab at the Broad Institute of MIT and Harvard</h1>
   </div>
     </div>
   );
