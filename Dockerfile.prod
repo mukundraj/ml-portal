@@ -1,0 +1,14 @@
+FROM node:14-buster as build
+WORKDIR /ml-portal
+
+COPY package.json .
+RUN npm install
+COPY . .
+
+# Fix from https://stackoverflow.com/questions/62663167/dockerizing-react-in-production-mode-fatal-error-ineffective-mark-compacts-nea
+ENV GENERATE_SOURCEMAP=false
+
+RUN npm run build
+
+from nginx:1.21.4-alpine
+COPY --from=build /ml-portal/build /usr/share/nginx/html

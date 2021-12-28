@@ -3,4 +3,6 @@ services:
   portal-container:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile.prod
+    ports:
+      - "8080:80"
