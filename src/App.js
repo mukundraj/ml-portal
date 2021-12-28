@@ -4,6 +4,7 @@ import {Routes, Route} from "react-router-dom";
 
 import {
   Home,
+  Viewer,
   About,
   Docs,
   Whoops404
@@ -11,14 +12,16 @@ import {
 
 function App() {
   return (
-    <div className="App">
+      <div className="App">
         <Routes>
           <Route path="/" element={<Home />}/>
+          <Route path="/viewer" element={<Viewer />}/>
           <Route path="/docs" element={<Docs />}/>
           <Route path="/about" element={<About />}/>
           <Route path="*" element={<Whoops404 />}/>
         </Routes>
-    </div>
+      </div>
+
   );
 }
 
