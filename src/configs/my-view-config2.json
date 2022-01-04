@@ -52,7 +52,10 @@
       "coordinationScopes": {
         "dataset": "A",
         "embeddingType": "D",
-        "embeddingZoom": "A"
+        "embeddingZoom": "A",
+        "geneSelection": "A",
+        "embeddingTargetX": "A",
+        "embeddingTargetY": "A"
       },
       "x": 0,
       "y": 0,
@@ -62,9 +65,12 @@
     {
       "component": "scatterplot",
       "coordinationScopes": {
-        "dataset": "B",
-        "embeddingType": "C",
-        "embeddingZoom": "B"
+        "dataset": "A",
+        "embeddingType": "D",
+        "embeddingZoom": "A",
+        "geneSelection": "B",
+        "embeddingTargetX": "A",
+        "embeddingTargetY": "A"
       },
       "x": 6,
       "y": 0,
@@ -73,7 +79,20 @@
     },
     {
       "component": "genes",
+      "coordinationScopes":{
+        "geneSelection": "A"
+      },
       "x": 0,
+      "y": 6,
+      "w": 4,
+      "h": 2
+    },
+    {
+      "component": "genes",
+      "coordinationScopes":{
+        "geneSelection": "B"
+      },
+      "x": 6,
       "y": 6,
       "w": 4,
       "h": 2
