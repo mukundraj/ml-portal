@@ -1,0 +1,83 @@
+{
+  "version": "1.0.4",
+  "name": "My example config",
+  "description": "This demonstrates the JSON schema",
+  "datasets": [
+    {
+      "uid": "D1",
+      "name": "Dries",
+      "files": [
+        {
+          "url": "https://s3.amazonaws.com/vitessce-data/0.0.31/master_release/linnarsson/linnarsson.cells.json",
+          "type": "cells",
+          "fileType": "cells.json"
+        },
+        {
+          "url": "https://s3.amazonaws.com/vitessce-data/0.0.31/master_release/linnarsson/linnarsson.genes.json",
+          "type": "expression-matrix",
+          "fileType": "genes.json"
+        }
+      ]
+    }, {
+    "uid": "D2",
+    "name": "inph",
+    "files": [
+      {
+        "url": "https://storage.googleapis.com/ml_portal/testportal_data/inph_data.json",
+        "type": "cells",
+        "fileType": "cells.json"
+      }
+    ]
+    }
+  ],
+  "coordinationSpace": {
+    "dataset": {
+      "A": "D1",
+      "B": "D2"
+    },
+    "embeddingType": {
+      "A": "umap",
+      "B": "t-SNE",
+      "C": "pca",
+      "D": "PCA"
+    },
+    "embeddingZoom": {
+      "A": 1.0,
+      "B": 1.0
+    }
+  },
+  "layout": [
+    {
+      "component": "scatterplot",
+      "coordinationScopes": {
+        "dataset": "A",
+        "embeddingType": "D",
+        "embeddingZoom": "A"
+      },
+      "x": 0,
+      "y": 0,
+      "w": 6,
+      "h": 6
+    },
+    {
+      "component": "scatterplot",
+      "coordinationScopes": {
+        "dataset": "B",
+        "embeddingType": "C",
+        "embeddingZoom": "B"
+      },
+      "x": 6,
+      "y": 0,
+      "w": 6,
+      "h": 6
+    },
+    {
+      "component": "genes",
+      "x": 0,
+      "y": 6,
+      "w": 4,
+      "h": 2
+    }
+  ],
+  "initStrategy": "auto"
+}
