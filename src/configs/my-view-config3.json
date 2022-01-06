@@ -1,0 +1,179 @@
+{
+  "version": "1.0.4",
+  "name": "My example config",
+  "description": "This demonstrates the JSON schema",
+  "datasets": [
+    {
+      "uid": "D1",
+      "name": "Dries",
+      "files": [
+        {
+          "url": "https://s3.amazonaws.com/vitessce-data/0.0.31/master_release/linnarsson/linnarsson.cells.json",
+          "type": "cells",
+          "fileType": "cells.json"
+        },
+        {
+          "url": "https://s3.amazonaws.com/vitessce-data/0.0.31/master_release/linnarsson/linnarsson.genes.json",
+          "type": "expression-matrix",
+          "fileType": "genes.json"
+        }
+      ]
+    }, {
+    "uid": "D2",
+    "name": "inph",
+    "files": [
+      {
+        "url": "https://storage.googleapis.com/ml_portal/testportal_data/inph_data.json",
+        "type": "cells",
+        "fileType": "cells.json"
+      }
+    ]
+    }, {
+    "uid": "D3",
+    "name": "inph",
+    "files": [
+      {
+        "url": "https://storage.googleapis.com/ml_portal/testportal_data/my_store.zarr",
+        "type": "cells",
+        "fileType": "anndata-cells.zarr",
+        "options": {
+          "mappings": {
+            "umap":{
+              "key":"obsm/X_umap",
+              "dims": [0, 1]
+            },
+            "pca": {
+              "key":"obsm/X_pca",
+              "dims": [0, 1]
+            }
+          },
+            "factors":[
+            "obs/nCount_RNA",
+            "obs/nFeature_RNA"
+            ]
+        }
+      }, 
+      {
+        "url": "https://storage.googleapis.com/ml_portal/testportal_data/my_store.zarr",
+        "type": "expression-matrix",
+        "fileType": "anndata-expression-matrix.zarr",
+        "options": {
+          "matrix": "X"
+        }
+      },
+      {
+        "url": "https://storage.googleapis.com/ml_portal/testportal_data/my_store.zarr",
+        "type": "cell-sets",
+        "fileType": "anndata-cell-sets.zarr",
+        "options": [
+          {
+            "groupName": "s-clusters",
+            "setName": "obs/seurat_clusters"
+          },
+          {
+            "groupName": "s-annotations",
+            "setName": "obs/orig.ident"
+          }
+        ]
+      }
+    ]
+    }
+
+  ],
+  "coordinationSpace": {
+    "dataset": {
+      "C": "D3"
+    },
+    "embeddingType": {
+      "A": "umap",
+      "B": "t-SNE",
+      "C": "pca",
+      "D": "PCA"
+    },
+    "embeddingZoom": {
+      "A": 1.0,
+      "B": 1.0
+    }
+  },
+  "layout": [
+    {
+      "component": "scatterplot",
+      "coordinationScopes": {
+        "dataset": "C",
+        "embeddingType": "C",
+        "embeddingZoom": "A",
+        "geneSelection": "A",
+        "embeddingTargetX": "A",
+        "embeddingTargetY": "A",
+        "cellSetSelection": "A"
+      },
+      "x": 0,
+      "y": 0,
+      "w": 6,
+      "h": 6
+    },
+    {
+      "component": "scatterplot",
+      "coordinationScopes": {
+        "dataset": "C",
+        "embeddingType": "C",
+        "embeddingZoom": "A",
+        "geneSelection": "B",
+        "embeddingTargetX": "A",
+        "embeddingTargetY": "A",
+        "cellSetSelection": "B"
+      },
+      "x": 6,
+      "y": 0,
+      "w": 6,
+      "h": 6
+    },
+    {
+      "component": "genes",
+      "coordinationScopes":{
+        "geneSelection": "A",
+        "dataset": "C"
+      },
+      "x": 0,
+      "y": 6,
+      "w": 3,
+      "h": 3
+    },
+    {
+      "component": "cellSets",
+      "coordinationScopes":{
+        "geneSelection": "A",
+        "dataset": "C",
+        "cellSetSelection": "A"
+      },
+      "x": 3,
+      "y": 6,
+      "w": 3,
+      "h": 3
+    },
+    {
+      "component": "genes",
+      "coordinationScopes":{
+        "geneSelection": "B",
+        "dataset": "C"
+      },
+      "x": 6,
+      "y": 6,
+      "w": 3,
+      "h": 3
+    },
+    {
+      "component": "cellSets",
+      "coordinationScopes":{
+        "geneSelection": "B",
+        "dataset": "C",
+        "cellSetSelection": "B"
+      },
+      "x": 9,
+      "y": 6,
+      "w": 3,
+      "h": 3
+    }
+  ],
+  "initStrategy": "auto"
+}
