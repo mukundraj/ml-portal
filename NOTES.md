@@ -53,9 +53,12 @@ docker-compose -f docker-compose.yml -f docker-compose-prod.yml up
 docker-compose -f docker-compose.yml -f docker-compose-prod.yml up -d --build
 docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d --build
 
+docker-compose stop
+docker-compose start
+
 ```
 
-### Rebuild if anything changes in Dockerfiles
+### Stop and remove whole stack(containers, networks, volumes, images) before rebuilding if anything changes in dockerfiles (reverses up)
 ```
 docker-compose -f docker-compose.yml -f docker-compose-prod.yml down
 
