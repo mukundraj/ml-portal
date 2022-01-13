@@ -1,7 +1,7 @@
 import React from "react"
 import {Link, useLocation} from "react-router-dom"
-import 'vitessce/dist/es/production/static/css/index.css';
-import { Vitessce } from 'vitessce';
+import '@macoskolab/vitessce/dist/es/production/static/css/index.css';
+import { Vitessce } from '@macoskolab/vitessce';
 import myViewConfig from './configs/view-config-inph-zarr.json';
 import Footer from './components/Footer'
 import Footer2 from './components/Footer2'
