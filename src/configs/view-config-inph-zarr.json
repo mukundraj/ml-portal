@@ -33,7 +33,7 @@
     "name": "inph",
     "files": [
       {
-        "url": "https://storage.googleapis.com/ml_portal/testportal_data/my_store3.zarr",
+        "url": "https://storage.googleapis.com/ml_portal/testportal_data/my_store_inph_astro.zarr",
         "type": "cells",
         "fileType": "anndata-cells.zarr",
         "options": {
@@ -54,7 +54,7 @@
         }
       }, 
       {
-        "url": "https://storage.googleapis.com/ml_portal/testportal_data/my_store3.zarr",
+        "url": "https://storage.googleapis.com/ml_portal/testportal_data/my_store_inph_astro.zarr",
         "type": "expression-matrix",
         "fileType": "anndata-expression-matrix.zarr",
         "options": {
@@ -62,7 +62,7 @@
         }
       },
       {
-        "url": "https://storage.googleapis.com/ml_portal/testportal_data/my_store3.zarr",
+        "url": "https://storage.googleapis.com/ml_portal/testportal_data/my_store_inph_astro.zarr",
         "type": "cell-sets",
         "fileType": "anndata-cell-sets.zarr",
         "options": [
