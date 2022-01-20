@@ -70,3 +70,10 @@ docker-compose -f docker-compose.yml -f docker-compose-prod.yml down
 
 ```
 
+### Steps to pull in changes in @macoskolab/vitessce
+
+- Push changes in @macoskolab/vitessce to npm repo with updated version number
+  - Remember to run before publishing: export NODE_OPTIONS=--max_old_space_size=4096
+- In this git repo's package.json, update @macoskolab/vitessce version, commit, and push
+- Run `npm install` and `npm start` to test locally
+- Build Docker image from scratch to test on docker container
