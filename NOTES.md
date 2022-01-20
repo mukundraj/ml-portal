@@ -56,6 +56,12 @@ docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d --build
 docker-compose stop
 docker-compose start
 
+// for development server
+localhost:3000
+
+// for production server
+localhost:8080
+
 ```
 
 ### Stop and remove whole stack(containers, networks, volumes, images) before rebuilding if anything changes in dockerfiles (reverses up)
